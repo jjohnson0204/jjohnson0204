@@ -9,12 +9,17 @@ public class JavaStringTokens {
         String s = scan.nextLine();
         // Write your code here.
         scan.close();
-        // get tokens from s input
-        String[] tokens = s.trim().split("[!,?.*_'@ ]+"); // eliminate all special characters and trim whitespaces
-        int size = tokens.length; // get the size  from tokens length
-        System.out.println(size); // prints token size
-        for (String token : tokens) { // enhanced for loop
-            System.out.println(token);// prints tokens
+        s=s.trim();
+        if(s.length()==0){
+            System.out.println("0");
+        }
+        else{
+            String[] tokens = s.split("[!,?.*_'@\\ ]+");
+            int size = tokens.length;
+            System.out.println(size);
+            for(int i=0; i<size; i++){
+                System.out.println(tokens[i]);
+            }
         }
     }
 }
