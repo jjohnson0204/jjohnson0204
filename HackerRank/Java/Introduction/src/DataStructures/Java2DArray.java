@@ -12,7 +12,7 @@ public class Java2DArray {
         for (int i = 0; i < 6; i++) { // row loop
             for (int j = 0; j < 6; j++) { // column loop
                 a[i][j] = sc.nextInt();
-                if (i > 1 && j > 1) {
+                if (i > 1 && j > 1) { // if i and j > 1
                     int sum = a[i][j] + a[i][j - 1] + a[i][j - 2]               // top of hourglass
                             + a[i - 1][j - 1]                                   // middle of hourglass
                             + a[i - 2][j] + a[i - 2][j - 1] + a[i - 2][j - 2];  // bottom of hourglass
